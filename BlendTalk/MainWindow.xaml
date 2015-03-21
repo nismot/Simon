@@ -15,6 +15,36 @@
 			 specify the path relevant to the file you are currently working on. -->
 		<Image x:Name="SimonBG" Source="C:\Users\Thomas\Documents\GitHub\Simon\Simon\BlendTalk\Images\Simon_BG.png" />
 		<Button Content="Button" HorizontalAlignment="Left" Height="162.833" Margin="96.667,8.167,0,0" VerticalAlignment="Top" Width="161.833"/>
+		<Button Content="Button" HorizontalAlignment="Left" Height="163.699" Margin="265.858,7.538,0,0" VerticalAlignment="Top" Width="163.699" RenderTransformOrigin="0.5,0.5">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="90"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+		</Button>
+		<Button Content="Button" HorizontalAlignment="Left" Height="163" Margin="266.334,178.001,0,0" VerticalAlignment="Top" Width="163" RenderTransformOrigin="0.5,0.5">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="180"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+		</Button>
+		<Button Content="Button" HorizontalAlignment="Left" Height="162.333" Margin="96,178,0,0" VerticalAlignment="Top" Width="162.333" RenderTransformOrigin="0.5,0.5">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="270"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+		</Button>
 
     </Grid>
 </Window>
