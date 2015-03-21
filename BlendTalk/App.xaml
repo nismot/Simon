@@ -5,5 +5,55 @@
 	StartupUri="MainWindow.xaml">
 	<Application.Resources>
 		<!-- Resources scoped at the Application level should be defined here. -->
+		<Style TargetType="{x:Type Button}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type Button}">
+						<Grid>
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualState x:Name="Normal">
+										<Storyboard>
+											<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Top_Blur">
+												<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+											</DoubleAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="MouseOver">
+										<Storyboard>
+											<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Top_Blur">
+												<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+											</DoubleAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Pressed">
+										<Storyboard>
+											<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Top_Blur">
+												<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+											</DoubleAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Disabled"/>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<Path x:Name="Bottom" Data="M96.666667,170 L183.16633,169.5 C187.66567,123.69073 211.85754,98.42114 257.49905,95.5 L257.49905,8.1666667 C210.58349,9.4064985 172.23492,25.685578 142.16616,56.499766 111.445,89.194023 96.690352,127.1635 96.666667,170 z" Fill="#FF5BA4FC" Stretch="Fill" Stroke="#FF5BA4FC"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content=""/>
+							<Path x:Name="Top_Blur" Data="M96.666667,170 L183.16633,169.5 C187.66567,123.69073 211.85754,98.42114 257.49905,95.5 L257.49905,8.1666667 C210.58349,9.4064985 172.23492,25.685578 142.16616,56.499766 111.445,89.194023 96.690352,127.1635 96.666667,170 z" Fill="#FFFBFDFF" Stretch="Fill" Stroke="#FF5BA4FC" Margin="3.714,4.286,6.225,5.714">
+								<Path.Effect>
+									<BlurEffect Radius="50"/>
+								</Path.Effect>
+							</Path>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<Trigger Property="IsFocused" Value="True"/>
+							<Trigger Property="IsDefaulted" Value="True"/>
+							<Trigger Property="IsMouseOver" Value="True"/>
+							<Trigger Property="IsPressed" Value="True"/>
+							<Trigger Property="IsEnabled" Value="False"/>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
 	</Application.Resources>
 </Application>

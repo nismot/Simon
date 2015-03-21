@@ -14,6 +14,7 @@
         <!-- Add our background image...*Note* Path is explicit, not like normal HTML where you 
 			 specify the path relevant to the file you are currently working on. -->
 		<Image x:Name="SimonBG" Source="C:\Users\Thomas\Documents\GitHub\Simon\Simon\BlendTalk\Images\Simon_BG.png" />
+		<Button Content="Button" HorizontalAlignment="Left" Height="162.833" Margin="96.667,8.167,0,0" VerticalAlignment="Top" Width="161.833"/>
 
     </Grid>
 </Window>
