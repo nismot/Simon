@@ -24,5 +24,11 @@ namespace BlendTalk
         {
             InitializeComponent();
         }
+		
+		// Allows us to be able to move our application by clicking on the background.
+		public void Mouse_LeftButtonDown(object sender, RoutedEventArgs e)
+		{
+			this.DragMove();
+		}
     }
 }
